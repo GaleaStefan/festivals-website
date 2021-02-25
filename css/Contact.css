@@ -1,0 +1,56 @@
+/* Pagina */
+body {
+	/* Fundal transparent */
+	background: none transparent;
+}
+
+#Contact_Pages {
+	position: absolute;
+	width: 99%;
+	height: 30%;
+	top: 15%;
+	left: 0;
+}
+
+#Insta, #Fb, #Twitter {
+	position: absolute;
+	width: 15%;
+	height: auto;
+}
+
+#Insta { left: 18%; }
+#Fb { left: 41%; }
+#Twitter { left: 66%; }
+
+img {
+	position: relative;
+	width: 100%;
+	height: auto;
+	opacity: 0.7;
+	display: block;
+	cursor: pointer;
+	
+	filter: grayscale(100%);
+	border-radius: 50%;
+	transition: all 0.5s;
+}
+
+img:hover {
+	filter: grayscale(0);
+	opacity: 1;
+	transform: scale(1.1);
+}
+
+span {
+	position: relative;
+	top: 8px;
+	width: 100%;
+	float: left;
+	display: block;
+	
+	text-align: center;
+	font-family: Century Gothic;
+	font-weight: bold;
+	font-size: 30px;
+	color: white;
+}

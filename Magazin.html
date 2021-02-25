@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="css/Magazin.css">
+		
+		<!-- JavaScript -->
+		<script src="js/Magazin.js"></script>
+	</head>
+
+	<body>
+		<meta charset="UTF-8">
+	
+		<div id = "Container">
+			<!--
+				Cele 5 festivale la care se pot cumpara bilete 
+				
+				Structura unui festival(se repeta pt fiecare festival)
+				<div>
+					- TITLU
+					- BODY
+						- Logo 
+						- Descriere(pret/data/bilete ramase)
+						- Buton cumparare
+						
+						#Prin apasarea butonului de cumparare, se apeleaza functia openBuyForm cu parametrii numele festivalului si pret bilet
+				</div>
+			-->
+			<div id = "Untold_Container" class = "Shop_Items">
+				<div class = "Items_Title">
+					<p class = "Title_Text">UNTOLD</p>
+				</div>
+				
+				<div class = "Items_Body">
+					<div class = "Items_Logo">
+						<img class = "Logo_Image" src = "fisiere/untold_logo.png" />
+					</div>
+					
+					<div class = "Items_Info">
+						<p class = "Info_Text" >	
+							Pret : 600 Lei<br/>
+							Data festival : 04/06/2020<br/>
+							Bilete ramase : 978/1000<br/>
+						</p>
+					</div>
+					
+					<div class = "Items_Buy">
+						<button id = "" class = "Buy_Button" onclick = "openBuyForm('Untold Festival', 600)">CUMPĂRĂ<br/>BILET</button>
+					</div>
+				</div>
+			</div>
+			
+			<div id = "Rock_Container" class = "Shop_Items">
+				<div class = "Items_Title">
+					<p class = "Title_Text">ROCKSTADT</p>
+				</div>
+				
+				<div class = "Items_Body">
+					<div class = "Items_Logo">
+						<img class = "Logo_Image" src = "fisiere/rockstadt_logo.png" />
+					</div>
+					
+					<div class = "Items_Info">
+						<p class = "Info_Text" >	
+							Pret : 300 Lei<br/>
+							Data festival : 01/08/2020<br/>
+							Bilete ramase : 457/1250<br/>
+						</p>
+					</div>
+					
+					<div class = "Items_Buy">
+						<button id = "" class = "Buy_Button" onclick = "openBuyForm('Rockstadt Festival', 300)">CUMPĂRĂ<br/>BILET</button>
+					</div>
+				</div>
+			</div>
+			
+			<div id = "Sun_Container" class = "Shop_Items">
+				<div class = "Items_Title">
+					<p class = "Title_Text">SUN WAVES</p>
+				</div>
+				
+				<div class = "Items_Body">
+					<div class = "Items_Logo">
+						<img class = "Logo_Image" src = "fisiere/sunwaves_logo.png" />
+					</div>
+					
+					<div class = "Items_Info">
+						<p class = "Info_Text" >	
+							Pret : 300 Lei<br/>
+							Data festival : 25/07/2020<br/>
+							Bilete ramase : 424/800<br/>
+						</p>
+					</div>
+					
+					<div class = "Items_Buy">
+						<button id = "" class = "Buy_Button" onclick = "openBuyForm('Sun Waves Festival', 300)">CUMPĂRĂ<br/>BILET</button>
+					</div>
+				</div>
+			</div>
+			
+			<div id = "Elect_Container" class = "Shop_Items">
+				<div class = "Items_Title">
+					<p class = "Title_Text">ELECTRIC CASTLE</p>
+				</div>
+				
+				<div class = "Items_Body">
+					<div class = "Items_Logo">
+						<img class = "Logo_Image" src = "fisiere/electric_logo.png" />
+					</div>
+					
+					<div class = "Items_Info">
+						<p class = "Info_Text" >	
+							Pret : 500 Lei<br/>
+							Data festival : 15/08/2020<br/>
+							Bilete ramase : 394/1000<br/>
+						</p>
+					</div>
+					
+					<div class = "Items_Buy">
+						<button id = "" class = "Buy_Button" onclick = "openBuyForm('Electric Castle Festival', 500)">CUMPĂRĂ<br/>BILET</button>
+					</div>
+				</div>
+			</div>
+			
+			<div id = "Never_Container" class = "Shop_Items">
+				<div class = "Items_Title">
+					<p class = "Title_Text">NEVERSEA</p>
+				</div>
+				
+				<div class = "Items_Body">
+					<div class = "Items_Logo">
+						<img class = "Logo_Image" src = "fisiere/neversea_logo.png" />
+					</div>
+					
+					<div class = "Items_Info">
+						<p class = "Info_Text" >	
+							Pret : 600 Lei<br/>
+							Data festival : 02/08/2020<br/>
+							Bilete ramase : 1236/1400<br/>
+						</p>
+					</div>
+					
+					<div class = "Items_Buy">
+						<button id = "" class = "Buy_Button" onclick = "openBuyForm('Neversea Festival', 600)">CUMPĂRĂ<br/>BILET</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Formularul de achizitionare a unui bilet - se afiseaza cand apesi pe butonul Cumpara -->
+		<div id = "Buy_Container" >
+			<!-- Titlu + Buton inchidere formular -->
+			<div id = "Form_Top">
+				<p id = "Form_Title">CUMPĂRĂ BILETE</p>
+				<button id = "Close_Form" type = "button" onclick = "closeBuyMenu()">X</button>
+			</div>
+			
+			<!-- Formular -->
+			<form id = "Buy_Menu" >
+				<!-- Sectiune selectare nr bilete + afisare pret -->
+				<fieldset>
+					<legend>Produs:</legend>
+					<span id = "Tickets">
+						<button id = "Lower_Quantity" type = "button" onclick = "changeQuantity(-1)">&#10094;</button>
+						
+						<!-- Cantitatea de bilete(se schimba cand utilizatorul apasa pe segeti) -->
+						<span id = "Quantity">1</span>
+						
+						<button id = "Raise_Quantity" type = "button" onclick = "changeQuantity(1)">&#10095;</button>
+						
+						<!-- <span id = "Festival"> este actualizat atunci cand se deschide formularul si afiseaza numele festivalului -->
+						<span>Bilet(e)&nbsp;</span><span id = "Festival"></span>
+						
+						<!-- "Price" este actualizat la deschiderea formularului si la schimbarea cantitatii de bilete -->
+						<div>Pret: <span id = "Price"></span> lei</div>
+					</span>
+					<br/><br/>
+					<span class = "Warning">Foloseşte segeţile pentru a mări/scădea cantitatea de bilete.</span>
+				</fieldset>
+				
+				<!-- Sectiune date personale: nume prenume etc.. -->
+				<fieldset>
+					<legend>Date personale:</legend>
+					<label id = "Name_Label">Nume, Prenume:</label>
+					<input id = "FName" class = "Rounded_Box" type = "text" placeholder = "Nume"></input>
+					<input id = "LName" class = "Rounded_Box" type = "text" placeholder = "Prenume"></input><br/>
+					
+					<label id = "Birthdate">Data naşterii:&emsp;&nbsp;&nbsp;&nbsp;</label>
+					<input id = "BDay" class = "Rounded_Box" type = "number" placeholder = "Zi"></input>
+					<input id = "BMonth" class = "Rounded_Box" type = "number" placeholder = "Lună"></input>
+					<input id = "BYear" class = "Rounded_Box" type = "number" placeholder = "An"></input><br/>
+					
+					<label id = "Email_Label">Email:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</label>
+					<input id = "Email" class = "Rounded_Box" type = "email" placeholder = "Email"></input><br/><br/>
+					
+					<span class = "Warning">Atenţie! Biletele se vor trimite în format online pe adresa de mail introdusă. Vă rugăm să vă asiguraţi că aceasta este corectă.</span>
+				</fieldset>
+				
+				<!--Sectiune informatii card -->
+				<fieldset>
+					<legend>Detalii plată:</legend>
+					<label id = "Owner_Label">Nume proprietar:</label>
+					<input id = "Owner" class = "Rounded_Box" type = "text" placeholder = "Nume"></input></br>
+					
+					<label id = "Number_Label">Număr card:&emsp;&emsp;&nbsp;</label>
+					<input id = "CNumber" class = "Rounded_Box" type = "text" placeholder = "0000-0000-0000-0000"></input>
+					<label id = "CVV_Label">CVV:</label>
+					<input id = "CVV" class = "Rounded_Box" type = "text" placeholder = "000"></input></br>
+					
+					<label id = "Expiration_Label">Dată expirare:&emsp;&nbsp;</label>
+					<select id = "Month" class = "Rounded_Box">
+						<option>Ianuarie</option>
+						<option>Februarie</option>
+						<option>Martie</option>
+						<option>Aprilie</option>
+						<option>Mai</option>
+						<option>Iunie</option>
+						<option>Iulie</option>
+						<option>August</option>
+						<option>Septembrie</option>
+						<option>Octombrie</option>
+						<option>Noiembrie</option>
+						<option>Decembrie</option>
+					</select>
+					
+					<select id = "Year" class = "Rounded_Box" >
+						<option>2020</option>
+						<option>2021</option>
+						<option>2022</option>
+						<option>2023</option>
+						<option>2024</option>
+						<option>2025</option>
+						<option>2026</option>
+					</select><br/><br/>
+					<span class = "Warning">Numărul CVV se află de obicei pe spatele cardului, lângă semnătură.</span>
+				</fieldset>
+				
+				<!-- Verificare Termeni + varsta -->
+				&emsp;<input type = "checkbox">Am citit <span style = "color:blue">Termenii şi Condiţiile</span></input><br/>
+				&emsp;<input type = "checkbox">Am împlinit vârsta de 18 ani</input>
+				
+				<!-- Buton cumparare -->
+				<button id = "Submit" type = "button">CUMPĂRĂ ACUM</button>
+			</form>
+		</div>
+	</body>
+</html>

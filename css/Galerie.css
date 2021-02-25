@@ -1,0 +1,142 @@
+/* Pagina */
+body {
+	/* Fundal transparent */
+	background: none transparent;
+}
+
+/* Elementele galeriei */
+#Gallery {
+	/* Pozitie */
+	position: absolute;
+	width: 100%;
+	height: 60%;
+	left: 0;
+	top: 5%;
+	
+	/*border: 3px solid black;*/
+}
+
+#Title {
+	position:absolute;
+	width: 100%;
+	height: 15%;
+	max-height: 15%;
+	
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: Century Gothic;
+	font-size: 40px;
+	font-weight: bold;
+	letter-spacing: 6px;
+	color: white;
+	
+	/*border: 3px solid gray;*/
+}
+
+#Prev, #Next {
+	position: absolute;
+	width: 20%;
+	height: 60%;
+	top: 27.5%;
+	
+	opacity: 0.6;
+	
+	/*border: 3px solid gray;*/
+}
+
+#Prev {
+	left: 12%;
+}
+
+#Next {
+	left: 68%;
+}
+
+#Principal {
+	position: absolute;
+	width: 30%;
+	height: 80%;
+	top: 16%;
+	left: 35%;
+	
+	/*border: 3px solid gray;*/
+}
+
+#Prev_Img, #Principal_Img, #Next_Img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	max-height: 100%;
+	
+	filter: grayscale(100%);
+}
+
+
+#Principal_Img {
+	transition: transform 2s;
+	opacity: 1;
+}
+
+#Principal_Img:hover {
+	filter: grayscale(0);
+	transform: scale(1.1);
+}
+
+/* Contor poze */
+#Counter {
+	/* Pozitie */
+	position: absolute;
+	top: 16%;
+	left: 35%;
+	padding: 8px;
+	
+	/* Font */
+	font-family: Century Gothic;
+	font-weight: bold;
+	font-size: 20px;
+	color: white;
+}
+
+/* Segeti: proprietati generale */
+.LeftArrow, .RightArrow {
+	/* Pozitie */
+	position: absolute;
+	width: auto;
+	height: auto;
+	top: 57%;
+	
+	/* Font */
+	font-weight: bold;
+	font-size: 30px;
+	color: white;
+	
+	/* Culoare */
+	background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+/* Segeata stanga: asezare in partea din stanga a pozei */
+.LeftArrow {
+	left: 36%;
+}
+
+/* Segeata dreapta: asezare in partea din dreapta a pozei */
+.RightArrow {
+	left: 63%;
+}
+
+/* Segeti: cand pui mouse-ul pe ele */
+.LeftArrow:hover, .RightArrow:hover{
+	/* Fundal */
+	background-color: gray;
+	opacity: 0.8;
+}

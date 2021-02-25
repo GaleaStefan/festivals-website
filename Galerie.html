@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="css/Galerie.css">
+		
+		<!-- JavaScript -->
+		<script src="js/Galerie.js"></script>
+	</head>
+
+	<body>
+		<div id = "Gallery" >
+			<!-- Titlul care apare deasupra pozei -->
+			<div id = "Title"> UNTOLD </div>
+			
+			<!--Imaginea anterioara -->
+			<div id = "Prev">
+				<img id = "Prev_Img" />
+			</div>
+			
+			<!-- Imaginea principala -->
+			<div id = "Principal" />
+				<img id = "Principal_Img" src = "fisiere/sw.jpg"/>
+			</div>
+			
+			<!-- Imaginea urmatoare -->
+			<div id = "Next" />
+				<img id = "Next_Img" />
+			</div>
+			
+			<!-- Contorul afisat in coltul din stanga sus -->
+			<div id = "Counter">1/15</div>
+			
+			<!-- Segetiile cu care schimbi poza -->
+			<button class = "LeftArrow" type = "button" onclick = "changePhoto(-1)">&#10094;</button>
+			<button class = "RightArrow" type = "button" onclick = "changePhoto(1)">&#10095;</button>
+		</div>
+		
+		<!-- Ruleaza functia onWebStart() din fisierul Galerie.js -->
+		<script>onWebStart()</script>
+	</body>
+</html>

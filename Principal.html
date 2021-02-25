@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title id = "Page_Title"></title>
+	
+		<!-- CSS -->
+		<link rel = "stylesheet" type = "text/css" href = "css/Principal.css">
+		
+		<!-- JavaScript -->
+		<script src = "js/Principal.js"></script>
+	</head>
+	
+	<body>
+		<!-- Meniul de navigare
+			- afiseaza logo-ul si butoanele de navigare ale paginilor
+			- animatiile butoanelor se afla in Principal.js 
+		-->
+		<div id = "Nav_Menu">
+			<img id = "Logo" src = "fisiere/logo.png" />
+			
+			<ul>
+				<li><button id = "Home_Btn"   class = "Nav_Buttons" type = "button" onclick = "">Acasă</button></li>
+				<li><button id = "Gallery_Btn" class = "Nav_Buttons" type = "button" onclick = "">Galerie</button></li>
+				<li><button id = "About_Btn"  class = "Nav_Buttons" type = "button" onclick = "">Despre</button></li>
+				<li><button id = "Shop_Btn"  class = "Nav_Buttons" type = "button" onclick = "">Magazin</button></li>
+				<li><button id = "Contact_Btn" class = "Nav_Buttons" type = "button" onclick = "">Contact</button></li>
+			</ul>
+		</div>
+		
+		<!-- Afisajul paginilor
+			- la apasarea unui buton din meniu, pagina respectiva butonului va fi afisata in <iframe> (prin intermediul Principal.js)
+		-->
+		<iframe id = "Page_Display"></iframe>
+		
+		<!-- Apeleaza functia onWebStart() din Principal.js pentru a initializa elementele paginii la pornirea site-ului -->
+		<script>onWebStart()</script>
+	</body>
+</html>

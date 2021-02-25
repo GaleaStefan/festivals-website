@@ -1,0 +1,327 @@
+/* Pagina */
+body {
+	/* Fundal transparent */
+	background: none transparent;
+}
+
+#Container {
+	position: absolute;
+	width: 90%;
+	height: 70%;
+	top: 10%;
+	left: 5%;
+	
+	transition: opacity 1s;
+}
+
+.Shop_Items {
+	position: absolute;
+	width: 19%;
+	height: 100%;
+	
+	transition: transform 0.5s;
+}
+
+.Shop_Items:hover {
+	transform: scale(1.05);
+}
+
+#Untold_Container {
+	left: 0.5%;
+}
+
+#Rock_Container {
+	left: 20.5%;
+}
+
+#Sun_Container {
+	left: 40.5%;
+}
+
+#Never_Container {
+	left: 60.5%;
+}
+
+#Elect_Container {
+	left: 80.5%;
+}
+
+.Items_Title {
+	position: absolute;
+	width: 100%;
+	height: 10%;
+	
+	opacity: 0.8;
+	background-color: #202020;
+}
+
+.Title_Text {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	
+	padding-top: 8px;
+	margin: auto;
+	display: block;
+	
+	opacity: 1;
+	
+	text-align: center;
+	font-family: Century Gothic;
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+}
+
+.Items_Body {
+	position: absolute;
+	width: 100%;
+	height: 90%;
+	top: 10%;
+	
+	background-color: white;
+	/*border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;*/
+	opacity: 0.8;
+}
+
+.Items_Logo {
+	position: absolute;
+	width: 100%;
+	height: 25%;
+	top: 5%;
+	left: 0;
+}
+
+.Logo_Image {
+	position: relative;
+	height: 100%;
+	width: auto;
+	
+	margin: auto;
+	display: block;
+}
+
+.Items_Info {
+	position: absolute;
+	width: 100%;
+	height: 30%;
+	top: 35%;
+	left: 0;
+}
+
+.Info_Text {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	
+	margin: auto;
+	display: block;
+	
+	text-align: center;
+	font-family: Century Gothic;
+	font-size: 20px;
+	font-weight: bold;
+	color: black;
+	opacity: 1;
+}
+
+.Items_Buy {
+	position: absolute;
+	width: 100%;
+	height: 15%;
+	bottom: 5%;
+	opacity: 1;
+}
+
+.Buy_Button { 
+	position: absolute;
+	width: 60%;
+	height: 100%;
+	left: 20%;
+	
+	font-family: Century Gothic;
+	font-size: 15px;
+	font-weight: bold;
+	color: white;
+	opacity: 1;
+	
+	padding: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	
+	background-color: #202020;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+.Buy_Button:hover {
+	background-color: #303030;
+}
+
+#Buy_Container {
+	position: absolute;
+	width: 30%;
+	height: 96%;
+	top: -100%;
+	left: 35%;
+	
+	display: block;
+	transition: all 1s;
+}
+
+#Form_Top {
+	position: absolute;
+	width:100%;
+	height: 8%;
+	background: rgba(20, 20, 20, 0.8);
+}
+
+#Form_Title {
+	position: relative;
+
+	margin-top: auto;
+	padding-top: 4px;
+	
+	text-align: center;
+	font-family: Century Gothic;
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+}
+
+#Close_Form {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 25px;
+	height: 25px;
+	
+	border-radius: 50%;
+	
+	background-color: rgba(220,20,60, 1);
+    background-repeat:no-repeat;
+    border: 1px solid white;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+	
+	font-weight:bold;
+	color: white;
+}
+
+#Buy_Menu {
+	position: absolute;
+	width: 100%;
+	height: 92%;
+	top: 8%;
+	
+	background: rgba(255, 255, 255, 0.8);
+}
+
+fieldset {
+	
+	margin-left: 8px;
+	margin-right: 8px;
+	padding-bottom: 8px;
+	
+	font-family: Century Gothic;
+	font-size: 16px;
+	font-weight: bold;
+	border: 1px solid #505050;
+	
+	
+}
+
+label {
+	font-family: Century Gothic;
+	font-size: 14px;
+	font-weight: none;
+}
+
+input {
+	background: rgba(255, 255, 255, 1);
+	border: 1px solid #202020;
+	padding: 2px;
+}
+
+.Rounded_Box {
+	height: 20px;
+	margin-bottom: 4px;
+	
+	border-radius: 8px;
+	text-align:center;
+}
+
+#Tickets {
+	width: 100%;
+	height: auto;
+	display: inline-block;
+	float: left;
+	
+	font-family: Century Gothic;
+	font-size: 14px;
+	font-weight: none;
+}
+
+#Name_Label {
+	width: 33%;
+	margin-bottom: 4px;
+}
+
+#FName, #LName { width: 33%; }
+
+#Birthdate {
+	width: 33%;
+	margin-bottom: 4px;
+}
+
+#BDay, #BMonth { width: 15%; }
+
+#BYear { width: 20%; }
+
+#Email_Label {
+	width: 33%;
+	margin-bottom: 4px;
+}
+
+#Email { width:60%; }
+
+.Warning {
+	font-family: Century Gothic;
+	font-size: 12px;
+	font-weight: none;
+	color: red;
+}
+
+#CVV {
+	width: 36px;
+}
+
+#Submit {
+	position: absolute;
+	width: 60%;
+	height: 36px;
+	left: 20%;
+	bottom: 5%;
+	
+	font-family: Century Gothic;
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+	opacity: 0.8;
+	
+	padding: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	
+	background-color: #202020;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
